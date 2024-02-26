@@ -1,0 +1,261 @@
+<div class="p4">
+    <span class="relative">
+        <span class="absolute inline float-right bg-blue-100 text-blue-800 text-base font-medium m-3 px-2.5 py-0.5 rounded-full">Active</span>
+        <button class="absolute right-0 float-left bg-blue-100 text-blue-800 m-3 p-1 rounded-full" wire:click="$dispatch('closeModal')"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12z"/></svg></button>
+        <img class="w-full object-cover object-center" src="https://images.unsplash.com/photo-1580477371194-4593e3c7c6cf?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"/>
+        <span class="absolute bottom-0 right-0 bg-teal-600 text-white text-base font-medium m-3 px-2.5 py-0.5 rounded-full">$2.500.000</span>
+    </span>
+    <form class="space-y-4 md:space-y-6 p-4" action="#">
+        <div>
+            <input type="text" name="name" id="name"
+                   class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 "
+                   placeholder="Nombre Completo" required>
+        </div>
+        <div>
+            <input type="email" name="email" id="email"
+                   class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 "
+                   placeholder="name@company.com" required>
+        </div>
+        <div class="grid grid-cols-3 gap-4">
+            <select name="password" id="password"
+                    class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" required>
+                <option value="93">(+93) AFG</option>
+                <option value="355">(+355) ALB</option>
+                <option value="213">(+213) DZA</option>
+                <option value="1684">(+1684) ASM</option>
+                <option value="376">(+376) AND</option>
+                <option value="244">(+244) AGO</option>
+                <option value="1264">(+1264) AIA</option>
+                <option value="1268">(+1268) ATG</option>
+                <option value="54">(+54) ARG</option>
+                <option value="374">(+374) ARM</option>
+                <option value="297">(+297) ABW</option>
+                <option value="61">(+61) AUS</option>
+                <option value="43">(+43) AUT</option>
+                <option value="994">(+994) AZE</option>
+                <option value="1242">(+1242) BHS</option>
+                <option value="973">(+973) BHR</option>
+                <option value="880">(+880) BGD</option>
+                <option value="1246">(+1246) BRB</option>
+                <option value="375">(+375) BLR</option>
+                <option value="32">(+32) BEL</option>
+                <option value="501">(+501) BLZ</option>
+                <option value="229">(+229) BEN</option>
+                <option value="1441">(+1441) BMU</option>
+                <option value="975">(+975) BTN</option>
+                <option value="591">(+591) BOL</option>
+                <option value="387">(+387) BIH</option>
+                <option value="267">(+267) BWA</option>
+                <option value="55">(+55) BRA</option>
+                <option value="673">(+673) BRN</option>
+                <option value="359">(+359) BGR</option>
+                <option value="226">(+226) BFA</option>
+                <option value="257">(+257) BDI</option>
+                <option value="855">(+855) KHM</option>
+                <option value="237">(+237) CMR</option>
+                <option value="1">(+1) CAN</option>
+                <option value="238">(+238) CPV</option>
+                <option value="1345">(+1345) CYM</option>
+                <option value="236">(+236) CAF</option>
+                <option value="235">(+235) TCD</option>
+                <option value="56">(+56) CHL</option>
+                <option value="86">(+86) CHN</option>
+                <option value="57">(+57) COL</option>
+                <option value="269">(+269) COM</option>
+                <option value="242">(+242) COG</option>
+                <option value="242">(+242) COD</option>
+                <option value="682">(+682) COK</option>
+                <option value="506">(+506) CRI</option>
+                <option value="225">(+225) CIV</option>
+                <option value="385">(+385) HRV</option>
+                <option value="53">(+53) CUB</option>
+                <option value="357">(+357) CYP</option>
+                <option value="420">(+420) CZE</option>
+                <option value="45">(+45) DNK</option>
+                <option value="253">(+253) DJI</option>
+                <option value="1767">(+1767) DMA</option>
+                <option value="1809">(+1809) DOM</option>
+                <option value="593">(+593) ECU</option>
+                <option value="20">(+20) EGY</option>
+                <option value="503">(+503) SLV</option>
+                <option value="240">(+240) GNQ</option>
+                <option value="291">(+291) ERI</option>
+                <option value="372">(+372) EST</option>
+                <option value="251">(+251) ETH</option>
+                <option value="500">(+500) FLK</option>
+                <option value="298">(+298) FRO</option>
+                <option value="679">(+679) FJI</option>
+                <option value="358">(+358) FIN</option>
+                <option value="33">(+33) FRA</option>
+                <option value="594">(+594) GUF</option>
+                <option value="689">(+689) PYF</option>
+                <option value="241">(+241) GAB</option>
+                <option value="220">(+220) GMB</option>
+                <option value="995">(+995) GEO</option>
+                <option value="49">(+49) DEU</option>
+                <option value="233">(+233) GHA</option>
+                <option value="350">(+350) GIB</option>
+                <option value="30">(+30) GRC</option>
+                <option value="299">(+299) GRL</option>
+                <option value="1473">(+1473) GRD</option>
+                <option value="590">(+590) GLP</option>
+                <option value="1671">(+1671) GUM</option>
+                <option value="502">(+502) GTM</option>
+                <option value="224">(+224) GIN</option>
+                <option value="245">(+245) GNB</option>
+                <option value="592">(+592) GUY</option>
+                <option value="509">(+509) HTI</option>
+                <option value="39">(+39) VAT</option>
+                <option value="504">(+504) HND</option>
+                <option value="852">(+852) HKG</option>
+                <option value="36">(+36) HUN</option>
+                <option value="354">(+354) ISL</option>
+                <option value="91">(+91) IND</option>
+                <option value="62">(+62) IDN</option>
+                <option value="98">(+98) IRN</option>
+                <option value="964">(+964) IRQ</option>
+                <option value="353">(+353) IRL</option>
+                <option value="972">(+972) ISR</option>
+                <option value="39">(+39) ITA</option>
+                <option value="1876">(+1876) JAM</option>
+                <option value="81">(+81) JPN</option>
+                <option value="962">(+962) JOR</option>
+                <option value="7">(+7) KAZ</option>
+                <option value="254">(+254) KEN</option>
+                <option value="686">(+686) KIR</option>
+                <option value="850">(+850) PRK</option>
+                <option value="82">(+82) KOR</option>
+                <option value="965">(+965) KWT</option>
+                <option value="996">(+996) KGZ</option>
+                <option value="856">(+856) LAO</option>
+                <option value="371">(+371) LVA</option>
+                <option value="961">(+961) LBN</option>
+                <option value="266">(+266) LSO</option>
+                <option value="231">(+231) LBR</option>
+                <option value="218">(+218) LBY</option>
+                <option value="423">(+423) LIE</option>
+                <option value="370">(+370) LTU</option>
+                <option value="352">(+352) LUX</option>
+                <option value="853">(+853) MAC</option>
+                <option value="389">(+389) MKD</option>
+                <option value="261">(+261) MDG</option>
+                <option value="265">(+265) MWI</option>
+                <option value="60">(+60) MYS</option>
+                <option value="960">(+960) MDV</option>
+                <option value="223">(+223) MLI</option>
+                <option value="356">(+356) MLT</option>
+                <option value="692">(+692) MHL</option>
+                <option value="596">(+596) MTQ</option>
+                <option value="222">(+222) MRT</option>
+                <option value="230">(+230) MUS</option>
+                <option value="52">(+52) MEX</option>
+                <option value="691">(+691) FSM</option>
+                <option value="373">(+373) MDA</option>
+                <option value="377">(+377) MCO</option>
+                <option value="976">(+976) MNG</option>
+                <option value="1664">(+1664) MSR</option>
+                <option value="212">(+212) MAR</option>
+                <option value="258">(+258) MOZ</option>
+                <option value="95">(+95) MMR</option>
+                <option value="264">(+264) NAM</option>
+                <option value="674">(+674) NRU</option>
+                <option value="977">(+977) NPL</option>
+                <option value="31">(+31) NLD</option>
+                <option value="599">(+599) ANT</option>
+                <option value="687">(+687) NCL</option>
+                <option value="64">(+64) NZL</option>
+                <option value="505">(+505) NIC</option>
+                <option value="227">(+227) NER</option>
+                <option value="234">(+234) NGA</option>
+                <option value="683">(+683) NIU</option>
+                <option value="672">(+672) NFK</option>
+                <option value="1670">(+1670) MNP</option>
+                <option value="47">(+47) NOR</option>
+                <option value="968">(+968) OMN</option>
+                <option value="92">(+92) PAK</option>
+                <option value="680">(+680) PLW</option>
+                <option value="507">(+507) PAN</option>
+                <option value="675">(+675) PNG</option>
+                <option value="595">(+595) PRY</option>
+                <option value="51">(+51) PER</option>
+                <option value="63">(+63) PHL</option>
+                <option value="0">(+0) PCN</option>
+                <option value="48">(+48) POL</option>
+                <option value="351">(+351) PRT</option>
+                <option value="1787">(+1787) PRI</option>
+                <option value="974">(+974) QAT</option>
+                <option value="262">(+262) REU</option>
+                <option value="40">(+40) ROM</option>
+                <option value="70">(+70) RUS</option>
+                <option value="250">(+250) RWA</option>
+                <option value="290">(+290) SHN</option>
+                <option value="1869">(+1869) KNA</option>
+                <option value="1758">(+1758) LCA</option>
+                <option value="508">(+508) SPM</option>
+                <option value="1784">(+1784) VCT</option>
+                <option value="684">(+684) WSM</option>
+                <option value="378">(+378) SMR</option>
+                <option value="239">(+239) STP</option>
+                <option value="966">(+966) SAU</option>
+                <option value="221">(+221) SEN</option>
+                <option value="248">(+248) SYC</option>
+                <option value="232">(+232) SLE</option>
+                <option value="65">(+65) SGP</option>
+                <option value="421">(+421) SVK</option>
+                <option value="386">(+386) SVN</option>
+                <option value="677">(+677) SLB</option>
+                <option value="252">(+252) SOM</option>
+                <option value="27">(+27) ZAF</option>
+                <option value="34">(+34) ESP</option>
+                <option value="94">(+94) LKA</option>
+                <option value="249">(+249) SDN</option>
+                <option value="597">(+597) SUR</option>
+                <option value="47">(+47) SJM</option>
+                <option value="268">(+268) SWZ</option>
+                <option value="46">(+46) SWE</option>
+                <option value="41">(+41) CHE</option>
+                <option value="963">(+963) SYR</option>
+                <option value="886">(+886) TWN</option>
+                <option value="992">(+992) TJK</option>
+                <option value="255">(+255) TZA</option>
+                <option value="66">(+66) THA</option>
+                <option value="228">(+228) TGO</option>
+                <option value="690">(+690) TKL</option>
+                <option value="676">(+676) TON</option>
+                <option value="1868">(+1868) TTO</option>
+                <option value="216">(+216) TUN</option>
+                <option value="90">(+90) TUR</option>
+                <option value="7370">(+7370) TKM</option>
+                <option value="1649">(+1649) TCA</option>
+                <option value="688">(+688) TUV</option>
+                <option value="256">(+256) UGA</option>
+                <option value="380">(+380) UKR</option>
+                <option value="971">(+971) ARE</option>
+                <option value="44">(+44) GBR</option>
+                <option value="1" selected="">(+1) USA</option>
+                <option value="598">(+598) URY</option>
+                <option value="998">(+998) UZB</option>
+                <option value="678">(+678) VUT</option>
+                <option value="58">(+58) VEN</option>
+                <option value="84">(+84) VNM</option>
+                <option value="1284">(+1284) VGB</option>
+                <option value="1340">(+1340) VIR</option>
+                <option value="681">(+681) WLF</option>
+                <option value="212">(+212) ESH</option>
+                <option value="967">(+967) YEM</option>
+                <option value="260">(+260) ZMB</option>
+                <option value="263">(+263) ZWE</option>
+            </select>
+            <input type="number" name="phone" id="phone" placeholder="Telefono" class="col-span-2 bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 " required>
+        </div>
+        <div>
+            <textarea name="repeat-password" id="repeat-password" placeholder="Mensaje" rows="5" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 " required></textarea>
+        </div>
+        <button type="submit" class="w-full active:scale-95 rounded-lg bg-blue-600 px-8 py-2 font-medium text-white outline-none focus:ring hover:opacity-90">
+            Solicitar Información
+        </button>
+        <p class="text-sm font-light text-gray-500 dark:text-gray-400">
+            Al enviar este formulario usted acepta los terminos y condiciones de <a href="#" class="font-medium text-primary-600 hover:underline">Esta pagina</a>
+        </p>
+    </form>
+</div>
