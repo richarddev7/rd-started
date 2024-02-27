@@ -27,7 +27,7 @@
                 <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                     <a href="{{ route('home-web') }}" class="flex items-center">
                         {{-- <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 mr-3" alt="Flowbite Logo" /> --}}
-                        <span class="self-center text-2xl font-semibold whitespace-nowrap text-white">Realtors Orlando</span>
+                        <span class="self-center text-2xl font-semibold whitespace-nowrap text-white">RD Started</span>
                     </a>
                     <button data-collapse-toggle="navbar-dropdown" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-dropdown" aria-expanded="false">
                         <span class="sr-only">Open main menu</span>
@@ -38,10 +38,7 @@
                     <div class="hidden w-full md:block md:w-auto" id="navbar-dropdown">
                         <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0">
                             <li>
-                                <a href="/" class="block py-2 pl-3 pr-4 text-white rounded" aria-current="page">Inicio</a>
-                            </li>
-                            <li>
-                                <a href="{{ route('properties') }}" class="block py-2 pl-3 pr-4 text-white rounded" aria-current="page">Propiedades</a>
+                                <a href="/" class="block py-2 pl-3 pr-4 text-white rounded" aria-current="page">@lang('index')</a>
                             </li>
                             <li>
                                 <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between w-full py-2 pl-3 pr-4 text-white rounded hover:bg-gray-500 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">Cuenta
@@ -50,18 +47,18 @@
                                     </svg>
                                 </button>
                                 <!-- Dropdown menu -->
-                                <div id="dropdownNavbar" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44">
+                                <div id="dropdownNavbar" class="z-30 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44">
                                     <ul class="py-2 text-sm text-white bg-gray-900" aria-labelledby="dropdownLargeButton">
                                         @guest
                                             <li>
-                                                <a href="{{ route('login-admin') }}" class="block px-4 py-2 hover:bg-gray-500">Iniciar Sesion</a>
+                                                <a href="{{ route('login-admin') }}" class="block px-4 py-2 hover:bg-gray-500">@lang('Login')</a>
                                             </li>
                                             <li>
-                                                <a href="{{ route('register-agent') }}" class="block px-4 py-2 hover:bg-gray-500">Resistro</a>
+                                                <a href="{{ route('register') }}" class="block px-4 py-2 hover:bg-gray-500">@lang('Register')</a>
                                             </li>
                                         @else
                                         <li>
-                                            <a href="#" class="block px-4 py-2 hover:bg-gray-500 dark:hover:bg-gray-600 dark:hover:text-white">Cerrar Sesion</a>
+                                            <a href="#" class="block px-4 py-2 hover:bg-gray-500 dark:hover:bg-gray-600 dark:hover:text-white">@lang('Logout')</a>
                                             <a class="block px-4 py-2 hover:bg-gray-500 dark:hover:bg-gray-600 dark:hover:text-white" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
                                             <form id="logout-form" action="{{ route('logout') }}" method="POST">
                                                 @csrf
@@ -82,7 +79,7 @@
             <footer class="bg-gray-800 mt-auto shadow p-2 dark:bg-gray-800 antialiased">
                 <div class="container sm:flex sm:items-center sm:justify-between mx-auto">
                     <p class="mb-4 text-sm text-center text-gray-500 dark:text-gray-400 sm:mb-0">
-                        &copy; 2023 <a href="https://flowbite.com/" class="hover:underline" target="_blank">OrlandoRealtors.team</a> All rights reserved.
+                        &copy; 2024 <a href="https://richard-dev" class="hover:underline" target="_blank">richard-dev.net</a> All rights reserved.
                     </p>
                     <div class="flex justify-center items-center space-x-1">
                         <a href="#" data-tooltip-target="tooltip-facebook" class="inline-flex justify-center p-2 text-gray-500 rounded-lg cursor-pointer dark:text-gray-400 dark:hover:text-white hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-600">
