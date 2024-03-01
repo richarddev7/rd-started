@@ -2,6 +2,7 @@
     "Dashboard": "Escritorio",
     "Search": "Buscar",
     "Users": "Usuarios",
+    "Title": "Titulo",
     "Create": "Crear",
     "Update": "Actualizar",
     "Delete": "Eliminar",
@@ -20,6 +21,10 @@
     "Components": "Componentes",
     "Description": "Descripción",
     "Create profile": "Crear perfil",
+    "Pages": "Paginas",
+    "Create page": "Crear pagina",
+    "Content": "Contenido",
+    "Status page": "Estatus de pagina",
     "Are you sure you want to eliminate": "Seguro que desea eliminar a",
     "Profiles user": "Perfiles de usuario"
 }

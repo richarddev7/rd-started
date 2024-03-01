@@ -37,11 +37,9 @@ Route::get('/lang/{locale}', function ($locale) {
 })->name('lang-app');
 
 
-
-
 //Route::post('/authenticate', 'authenticate')->name('authenticate');
-Route::post('/authenticate', '\App\Http\Controllers\LoginRegisterController@authenticate')->name('authenticate');
-Route::post('/logout', '\App\Http\Controllers\LoginRegisterController@logout')->name('logout');
+//Route::post('/authenticate', '\App\Http\Controllers\LoginRegisterController@authenticate')->name('authenticate');
+//Route::post('/logout', '\App\Http\Controllers\LoginRegisterController@logout')->name('logout');
 
 // Administracion
 Route::get('/app/dashboard', \App\Livewire\Admin\Dashboard::class)->name('app-dashboard')->middleware('auth');
@@ -51,6 +49,13 @@ Route::prefix('/app/users')->group(function () {
     Route::get('/', \App\Livewire\Admin\Users\Users::class)->name('app-users')->middleware('auth');
     Route::get('/create', [\App\Livewire\Admin\Users\Users::class, 'createUser'])->name('app-create-user')->middleware('auth');
     Route::get('/edit/{id}', [\App\Livewire\Admin\Users\Users::class, 'editUser'])->name('app-edit-user')->middleware('auth');
+});
+
+// Page
+Route::prefix('/app/pages')->group(function () {
+    Route::get('/', \App\Livewire\Admin\Pages\Pages::class)->name('app-pages')->middleware('auth');
+    Route::get('/create', [\App\Livewire\Admin\Pages\Pages::class, 'createPage'])->name('app-create-page')->middleware('auth');
+    Route::get('/edit/{id}', [\App\Livewire\Admin\Pages\Pages::class, 'editPage'])->name('app-edit-page')->middleware('auth');
 });
 
 // Settings

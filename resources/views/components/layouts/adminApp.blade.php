@@ -379,6 +379,36 @@
                                     </li>
                                 </ul>
                             </li>
+                            <li>
+                                <button type="button"
+                                        class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700"
+                                        aria-controls="dropdown-pages" data-collapse-toggle="dropdown-pages">
+                                    <svg
+                                        class="w-6 h-6 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white"
+                                        xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                                        <path fill="currentColor"
+                                              d="M16 17v2H2v-2s0-4 7-4s7 4 7 4m-3.5-9.5A3.5 3.5 0 1 0 9 11a3.5 3.5 0 0 0 3.5-3.5m3.44 5.5A5.32 5.32 0 0 1 18 17v2h4v-2s0-3.63-6.06-4M15 4a3.39 3.39 0 0 0-1.93.59a5 5 0 0 1 0 5.82A3.39 3.39 0 0 0 15 11a3.5 3.5 0 0 0 0-7"/>
+                                    </svg>
+                                    <span class="flex-1 ml-3 text-left whitespace-nowrap"
+                                          sidebar-toggle-item="">@lang('Pages')</span>
+                                    <svg sidebar-toggle-item="" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                              d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                              clip-rule="evenodd"></path>
+                                    </svg>
+                                </button>
+                                <ul id="dropdown-pages" class="hidden py-2 space-y-2">
+                                    <li>
+                                        <a href="{{ route('app-create-page') }}"
+                                           class="flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700">@lang('Create page')</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ route('app-pages') }}"
+                                           class="flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700">@lang('Pages')</a>
+                                    </li>
+                                </ul>
+                            </li>
 
                             <li>
                                 <a href="{{ route('app-settings') }}"
