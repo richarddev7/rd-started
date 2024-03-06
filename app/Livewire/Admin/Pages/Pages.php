@@ -61,7 +61,7 @@ class Pages extends Component{
         // busqueda
         $pages = MPost::where('title_post', 'like', '%' . $this->pageSearch . '%')
             ->orderBy('create_date_post', 'desc')
-            ->paginate(4);
+            ->paginate(NUM_PAGINATE_DEFAULT_SYSTEM);
 
         return view('livewire.admin.pages.pages', [
             'pages' => $pages

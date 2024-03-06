@@ -11,21 +11,23 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('app_post', function (Blueprint $table) {
-            $table->integer('id_post', true)->primary();
-            $table->string('title_post', 300);
-            $table->string('slug_post', 200)->unique();
-            $table->string('type_post', 30);
-            $table->longText('content_post');
-            $table->string('img_cover_post', 300)->nullable();
-            $table->string('category_post', 500)->nullable();
-            $table->string('title_seo_post', 200)->nullable();
-            $table->string('description_seo_post', 350)->nullable();
-            $table->string('keywords_seo_post', 400)->nullable();
-            $table->integer('status_post');
-            $table->timestamp('create_date_post');
-            $table->timestamp('update_date_post');
-        });
+        if (! Schema::hasTable('app_post')) {
+            Schema::create('app_post', function (Blueprint $table) {
+                $table->integer('id_post', true)->primary();
+                $table->string('title_post', 300);
+                $table->string('slug_post', 200)->unique();
+                $table->string('type_post', 30);
+                $table->longText('content_post');
+                $table->string('img_cover_post', 300)->nullable();
+                $table->string('category_post', 500)->nullable();
+                $table->string('title_seo_post', 200)->nullable();
+                $table->string('description_seo_post', 350)->nullable();
+                $table->string('keywords_seo_post', 400)->nullable();
+                $table->integer('status_post');
+                $table->timestamp('create_date_post');
+                $table->timestamp('update_date_post');
+            });
+        }
     }
 
     /**

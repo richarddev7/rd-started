@@ -21,10 +21,18 @@
     "Components": "Componentes",
     "Description": "Descripción",
     "Create profile": "Crear perfil",
+    "Create article": "Crear articulo",
+    "Categories": "Categorias",
     "Pages": "Paginas",
+    "Articles": "Articulos",
     "Create page": "Crear pagina",
     "Content": "Contenido",
     "Status page": "Estatus de pagina",
+    "Status article": "Estatus de articulo",
     "Are you sure you want to eliminate": "Seguro que desea eliminar a",
-    "Profiles user": "Perfiles de usuario"
+    "Profiles user": "Perfiles de usuario",
+    "Articles": "Articulos",
+    "Create article": "Crear articulo",
+    "Create category": "Crear categoría",
+    "Categories": "Categorías"
 }

@@ -119,6 +119,7 @@
                     </table>
 
                     {{-- Pagination --}}
+
                     {{ $users->links() }}
 
                 </div>

@@ -24,6 +24,9 @@
             'title' => $page->title_post,
             'slug' => $page->slug_post,
             'formFieldContent' => $page->content_post,
+            'seoTitle' => $page->title_seo_post,
+            'seoDescription' => $page->description_seo_post,
+            'seoKeyworks' => $page->keywords_seo_post,
             'status' => $page->status_post,
         ])
 

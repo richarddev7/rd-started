@@ -59,7 +59,9 @@ class LoginApp extends Component{
                 // https://www.codegrepper.com/code-examples/php/session+variable+in+laravel
                 session()->put('userLogin', $userDataLogin);
 
-                session()->flash('message', __('You have successfully logged in!'));
+                // Message login sucess
+                //session()->flash('message', __('You have successfully logged in!'));
+
                 return redirect()->route('app-dashboard');
 
             }else{

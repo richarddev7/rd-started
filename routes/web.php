@@ -58,6 +58,16 @@ Route::prefix('/app/pages')->group(function () {
     Route::get('/edit/{id}', [\App\Livewire\Admin\Pages\Pages::class, 'editPage'])->name('app-edit-page')->middleware('auth');
 });
 
+// Articles
+Route::prefix('/app/articles')->group(function () {
+    Route::get('/', \App\Livewire\Admin\Articles\Articles::class)->name('app-articles')->middleware('auth');
+    Route::get('/create', [\App\Livewire\Admin\Articles\Articles::class, 'createArticle'])->name('app-create-article')->middleware('auth');
+    Route::get('/edit/{id}', [\App\Livewire\Admin\Articles\Articles::class, 'editArticle'])->name('app-edit-article')->middleware('auth');
+
+    // Categories
+    Route::get('/categories', \App\Livewire\Admin\Articles\Categories::class)->name('app-articles-categories')->middleware('auth');
+});
+
 // Settings
 Route::prefix('/app/settings')->group(function () {
     Route::get('/', \App\Livewire\Admin\Settings\Settings::class)->name('app-settings')->middleware('auth');

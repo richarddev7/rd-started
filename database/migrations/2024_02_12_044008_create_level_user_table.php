@@ -12,16 +12,19 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('app_user_profile', function (Blueprint $table) {
-            $table->id(); // esta línea ya existía
+        if (! Schema::hasTable('app_user_profile')) {
 
-            // Nuevos campos
-            $table->string('level');
-            $table->string('name_profile');
-            $table->text('description_profile');
+            Schema::create('app_user_profile', function (Blueprint $table) {
+                $table->id(); // esta línea ya existía
 
-            $table->timestamps();
-        });
+                // Nuevos campos
+                $table->string('level');
+                $table->string('name_profile');
+                $table->text('description_profile');
+
+                $table->timestamps();
+            });
+        }
     }
 
     /**
