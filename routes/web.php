@@ -13,13 +13,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-/*Route::get('/', function () {
-    return view('welcome');
-});*/
-
 Route::get('/', \App\Livewire\IndexApp::class)->name('home-web');
 Route::get('/iniciar-sesion', \App\Livewire\LoginApp::class)->name('login-admin');
 Route::get('/registro', \App\Livewire\RegisterApp::class)->name('register');
+
+// Post & Page (Website)
+Route::get('/blog', \App\Livewire\Website\Blog::class)->name('blog-web');
+Route::get('/cat/{slug}', \App\Livewire\Website\Blog::class)->name('categories-web');
+Route::get('/{slug}', \App\Livewire\Website\Website::class)->name('post-web');
 
 // Ruta para traduccion
 Route::get('/lang/{locale}', function ($locale) {
@@ -36,10 +37,6 @@ Route::get('/lang/{locale}', function ($locale) {
 
 })->name('lang-app');
 
-
-//Route::post('/authenticate', 'authenticate')->name('authenticate');
-//Route::post('/authenticate', '\App\Http\Controllers\LoginRegisterController@authenticate')->name('authenticate');
-//Route::post('/logout', '\App\Http\Controllers\LoginRegisterController@logout')->name('logout');
 
 // Administracion
 Route::get('/app/dashboard', \App\Livewire\Admin\Dashboard::class)->name('app-dashboard')->middleware('auth');

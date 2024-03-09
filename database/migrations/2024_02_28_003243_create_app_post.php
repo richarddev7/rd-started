@@ -13,7 +13,7 @@ return new class extends Migration
     {
         if (! Schema::hasTable('app_post')) {
             Schema::create('app_post', function (Blueprint $table) {
-                $table->integer('id_post', true)->primary();
+                $table->integer('id_post', true);
                 $table->string('title_post', 300);
                 $table->string('slug_post', 200)->unique();
                 $table->string('type_post', 30);
@@ -26,6 +26,9 @@ return new class extends Migration
                 $table->integer('status_post');
                 $table->timestamp('create_date_post');
                 $table->timestamp('update_date_post');
+
+                $table->primary(['id_post']);
+                $table->unique(['slug_post']);
             });
         }
     }

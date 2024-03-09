@@ -66,7 +66,11 @@
                                 <td class="w-4 p-4 text-sm font-normal text-gray-500 dark:text-gray-400">
                                     {{ $page->id_post }}
                                 </td>
-                                <td class="p-4 text-base font-normal text-gray-900 whitespace-nowrap dark:text-white">{{ $page->title_post }}</td>
+                                <td class="p-4 text-base font-normal text-gray-900 dark:text-white">
+                                    <a href="/{{ $page->slug_post }}" target="_blank">
+                                        {{ $page->title_post }}
+                                        <svg class="inline" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6m-7 1l9-9m-5 0h5v5"/></svg>                                    </a>
+                                </td>
                                 <td class="p-4 text-base font-normal text-gray-900 whitespace-nowrap dark:text-white">{{ $page->create_date_post }}</td>
                                 <td class="p-4 text-base font-normal text-gray-900 whitespace-nowrap dark:text-white">
                                     <div class="flex items-center">

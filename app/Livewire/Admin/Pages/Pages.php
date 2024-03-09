@@ -60,6 +60,7 @@ class Pages extends Component{
 
         // busqueda
         $pages = MPost::where('title_post', 'like', '%' . $this->pageSearch . '%')
+            ->where('type_post', '=', 'page')
             ->orderBy('create_date_post', 'desc')
             ->paginate(NUM_PAGINATE_DEFAULT_SYSTEM);
 

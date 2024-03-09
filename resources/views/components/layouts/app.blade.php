@@ -15,6 +15,8 @@
 
         @vite(['resources/css/app.css', 'resources/js/app.js'])
 
+        <script src="https://cdn.tailwindcss.com"></script>
+
         <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.1.1/flowbite.min.css" rel="stylesheet" />
 
         {{-- Website Scripts --}}
@@ -38,7 +40,10 @@
                     <div class="hidden w-full md:block md:w-auto" id="navbar-dropdown">
                         <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0">
                             <li>
-                                <a href="/" class="block py-2 pl-3 pr-4 text-white rounded" aria-current="page">@lang('index')</a>
+                                <a href="/" class="block py-2 pl-3 pr-4 text-white rounded" aria-current="page">@lang('Index')</a>
+                            </li>
+                            <li>
+                                <a href="{{ route('blog-web') }}" class="block py-2 pl-3 pr-4 text-white rounded" aria-current="page">@lang('Blog')</a>
                             </li>
                             <li>
                                 <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between w-full py-2 pl-3 pr-4 text-white rounded hover:bg-gray-500 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">Cuenta
@@ -57,13 +62,12 @@
                                                 <a href="{{ route('register') }}" class="block px-4 py-2 hover:bg-gray-500">@lang('Register')</a>
                                             </li>
                                         @else
-                                        <li>
-                                            <a href="#" class="block px-4 py-2 hover:bg-gray-500 dark:hover:bg-gray-600 dark:hover:text-white">@lang('Logout')</a>
-                                            <a class="block px-4 py-2 hover:bg-gray-500 dark:hover:bg-gray-600 dark:hover:text-white" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
-                                            <form id="logout-form" action="{{ route('logout') }}" method="POST">
-                                                @csrf
-                                            </form>
-                                        </li>
+                                            <li>
+                                                <a href="{{ route('app-dashboard') }}" class="block px-4 py-2 hover:bg-gray-500">@lang('Dashboard')</a>
+                                            </li>
+                                            <li>
+                                                @livewire('Admin\Logout')
+                                            </li>
                                         @endguest
                                     </ul>
                                 </div>

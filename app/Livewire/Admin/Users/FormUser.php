@@ -48,7 +48,6 @@ class FormUser extends Component{
     public $socialX;
 
 
-
     public function storeUser(){
 
         //dd($this->name);
