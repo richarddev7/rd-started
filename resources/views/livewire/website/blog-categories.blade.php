@@ -2,54 +2,54 @@
     <div class="max-w-screen-xl mx-auto">
 
         <div class="py-8 mb-4 col-span-full xl:mb-2 text-center">
-            <h1 class="text-xl font-semibold text-gray-900 sm:text-2xl dark:text-white">{{ $titlePage }}</h1>
+            <h1 class="text-xl font-semibold text-gray-900 sm:text-2xl dark:text-white">@lang('Category'): {{ $titlePage }}</h1>
         </div>
         <!-- Right Content -->
         <div class="container px-5 mx-auto">
             <div class="flex flex-wrap -m-4">
-                @forelse($listBlog as $blog)
+                @forelse($listArticlesCategories as $article)
                     @php
 
                         // Link
-                        $linkArticle = route('post-web', ['slug' => $blog->slug_post]);
+                        $linkArticle = route('post-web', ['slug' => $article->slug_post]);
 
                         // Date
-                        $dateCreate = \Illuminate\Support\Carbon::make($blog->create_date_post);
+                        $dateCreate = \Illuminate\Support\Carbon::make($article->create_date_post);
 
                         // Imagen del articulo
-                        if($blog->img_cover_post != ""){
-                            $imgPost = '/storage/' . $blog['img_cover_post'];
+                        if($article->img_cover_post != ""){
+                            $imgPost = '/storage/' . $article['img_cover_post'];
 
                         }else{
                             $imgPost = "storage/assets/image-default.jpg";
                         }
 
                         // Content
-                        $dataArticle = html_entity_decode($blog->content_post);
+                        $dataArticle = html_entity_decode($article->content_post);
                         $contentArticle =  \Illuminate\Support\Str::limit(strip_tags($dataArticle), 150, $end = '...');
 
                     @endphp
-                <div class="p-4 md:w-1/3">
-                    <div class="h-full rounded shadow-cla-blue bg-gradient-to-r from-indigo-50 to-blue-50 overflow-hidden">
-                        <a href="{{ $linkArticle }}">
-                            <img class="lg:h-48 md:h-36 w-full object-cover object-center scale-110 transition-all duration-400 hover:scale-100" src="{{ asset($imgPost) }}" alt="blog">
-                        </a>
-                        <div class="p-6">
-                            <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">{{ $dateCreate->toFormattedDateString() }} - CATEGORY-1</h2>
-                            <h1 class="title-font text-lg font-medium text-gray-600 mb-3">
-                                <a href="{{ $linkArticle }}">
-                                    {{ $blog['title_post'] }}
-                                </a>
-                            </h1>
-                            <p class="leading-relaxed mb-3">{{ $contentArticle }}</p>
-                            <div class="flex items-right flex-wrap ">
-                                <a href="{{ $linkArticle }}" class="bg-gradient-to-r from-cyan-400 to-blue-400 hover:scale-105 drop-shadow-md  shadow-cla-blue px-4 py-1 rounded" >@lang('Read more')</a>
+                    <div class="p-4 md:w-1/3">
+                        <div class="h-full rounded shadow-cla-blue bg-gradient-to-r from-indigo-50 to-blue-50 overflow-hidden">
+                            <a href="{{ $linkArticle }}">
+                                <img class="lg:h-48 md:h-36 w-full object-cover object-center scale-110 transition-all duration-400 hover:scale-100" src="{{ asset($imgPost) }}" alt="blog">
+                            </a>
+                            <div class="p-6">
+                                <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">{{ $dateCreate->toFormattedDateString() }} - CATEGORY-1</h2>
+                                <h1 class="title-font text-lg font-medium text-gray-600 mb-3">
+                                    <a href="{{ $linkArticle }}">
+                                        {{ $article['title_post'] }}
+                                    </a>
+                                </h1>
+                                <p class="leading-relaxed mb-3">{{ $contentArticle }}</p>
+                                <div class="flex items-right flex-wrap ">
+                                    <a href="{{ $linkArticle }}" class="bg-gradient-to-r from-cyan-400 to-blue-400 hover:scale-105 drop-shadow-md  shadow-cla-blue px-4 py-1 rounded" >@lang('Read more')</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
                 @empty
-                    <div class="p-4 md:w-1/3">@lang('Not data')</div>
+                    <div class="p-4 md:w-1/3">@lang('This category not have articles')</div>
                 @endforelse
                 <div class="p-4 md:w-1/3 hidden">
                     <div class="h-full rounded-xl shadow-cla-violate bg-gradient-to-r from-pink-50 to-red-50 overflow-hidden">
@@ -84,3 +84,4 @@
 
     </div>
 </div>
+

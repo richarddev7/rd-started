@@ -14,6 +14,13 @@
                     <div class="px-4 mb-4 text-sm">
                         {{ $post['create_date_post'] }}
                         -
+                        @foreach($categories as $categoryPost)
+                            @if(in_array($categoryPost->id_post_category, json_decode($post['category_post'])))
+                                <a href="{{ route('categories-web', ['slug' => $categoryPost->slug_category]) }}" class="text-blue-600 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                    📌 {{ $categoryPost->name_category }}
+                                </a>
+                            @endif
+                        @endforeach
                     </div>
                     <div class="px-4">
                         {!! $post['content_post'] !!}

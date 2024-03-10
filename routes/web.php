@@ -19,7 +19,7 @@ Route::get('/registro', \App\Livewire\RegisterApp::class)->name('register');
 
 // Post & Page (Website)
 Route::get('/blog', \App\Livewire\Website\Blog::class)->name('blog-web');
-Route::get('/cat/{slug}', \App\Livewire\Website\Blog::class)->name('categories-web');
+Route::get('/cat/{slug}', \App\Livewire\Website\BlogCategories::class)->name('categories-web');
 Route::get('/{slug}', \App\Livewire\Website\Website::class)->name('post-web');
 
 // Ruta para traduccion
