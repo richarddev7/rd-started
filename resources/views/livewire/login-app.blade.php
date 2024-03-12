@@ -1,3 +1,4 @@
+@section('title', __('Login') . ' | ' . env('APP_NAME'))
 <div class="container mx-auto ">
 
     <section class="mt-10 mb-10 ">

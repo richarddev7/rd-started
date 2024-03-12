@@ -1,3 +1,4 @@
+@section('title', $post['title_post']  . ' | ' . env('APP_NAME'))
 <div>
     <div class="">
 

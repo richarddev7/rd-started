@@ -1,3 +1,4 @@
+@section('title', 'Blog'  . ' | ' . env('APP_NAME'))
 <div>
     <div class="max-w-screen-xl mx-auto">
 

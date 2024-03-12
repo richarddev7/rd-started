@@ -1,3 +1,4 @@
+@section('title', __('Index')  . ' | ' . env('APP_NAME'))
 <div>
     <div class="w-full">
         <div class="w-screen h-screen overflow-hidden relative before:block before:absolute before:bg-black before:h-full before:w-full before:top-0 before:left-0 before:opacity-30">

@@ -1,4 +1,6 @@
+@section('title', $post['title_post'] . ' | ' . env('APP_NAME'))
 <div>
+
     <div class="">
 
             <div class="max-w-screen-xl mx-auto">
