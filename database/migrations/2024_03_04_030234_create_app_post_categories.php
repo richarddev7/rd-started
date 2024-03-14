@@ -13,7 +13,7 @@ return new class extends Migration
     {
         if (! Schema::hasTable('app_post_categories')) {
             Schema::create('app_post_categories', function (Blueprint $table) {
-                $table->integer('id_post_category', true)->primary();
+                $table->integer('id_post_category')->autoIncrement();
                 $table->string('name_category', 200);
                 $table->string('slug_category', 300)->unique();
                 $table->string('description_category', 500)->nullable();

@@ -50,6 +50,5 @@ class UserSeeder extends Seeder
         $userAdicionalData->social_x = null;
         $userAdicionalData->save();
 
-        $user->roles()->attach(1);
     }
 }
