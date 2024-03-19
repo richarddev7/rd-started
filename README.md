@@ -4,6 +4,20 @@
 
 Este proyecto "started" está desarrollado en Laravel, un framework PHP robusto y popular para el desarrollo de aplicaciones web. El proyecto Incluye la siguientes caracteristicas:
 
+1. Index
+![Screen](https://i.ibb.co/48fjWST/rd-started-capture-1.png "Index")
+
+2. Admin Dashboard
+![Screen](https://i.ibb.co/c3GGK0b/rd-started-capture-2.png "Dashboard")
+
+## Demo
+💻 Index [https://rd-started.richard-dev.net](https://rd-started.richard-dev.net)
+
+💻 Login [https://rd-started.richard-dev.net/iniciar-sesion](https://rd-started.richard-dev.net/iniciar-sesion)
+
+.- 👦 Username: admin@richard-dev.net
+
+.- 🔑 Password: admin-2024
 
 **Featured:**
 - Index
@@ -30,27 +44,37 @@ Este proyecto "started" está desarrollado en Laravel, un framework PHP robusto 
 git clone https://github.com/richarddev7/rd-started.git
 ```
 
-**3. Create env file**
+**2. Create env file**
 ```bash
 Create a .env file by cloning .env.example file
 ```
 
-**4. Create a Database named**
+**3. Create a Database named**
 ```bash
-rd_strarted
+"rd_strarted" and repleace value in file .env -> DB_DATABASE
 ```
 
-**5. Run Migration & Seed**
+**4. Update Composer**
+```bash
+composer update
+```
+
+**5. Genera Key APP**
+```bash
+php artisan key:generate
+```
+
+**6. Run Migration & Seed**
 ```bash
 php artisan migrate
 ```
 
-**6. Run User Seeder**
+**7. Run User Seeder**
 ```bash
 php artisan db:seed --class=UserSeeder
 ```
 
-**7. Run Build App**
+**8. Run Build App**
 ```bash
 npm run build
 
@@ -58,12 +82,17 @@ npm run build
 npm install
 ```
 
-**8. Run On Local Machine**
+**9. Create Storage Link**
+```bash
+php artisan storage:link
+```
+
+**10. Run On Local Machine**
 ```bash
 php artisan serve
 ```
 
-**9. Open Browser**
+**11. Open Browser**
 ```bash
 http://localhost:8000
 ```
